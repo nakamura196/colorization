@@ -1,9 +1,9 @@
 import os
 import json
 
-path = 'input2.json'
+path = 'input.json'
 opath = path+"_out.json"
-file = 'repot2.json'
+file = 'repot.json'
 
 original = ""; #"写真帖『東京帝國大學』明治33年(1900)年版（東京大学総合図書館所蔵）"
 after = ""; #"写真帖『東京帝國大學』明治33年(1900)年版（東京大学総合図書館所蔵）を改変"
