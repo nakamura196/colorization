@@ -1,9 +1,12 @@
 import os
 import json
 
-path = 'input2.json'
-opath = path+"_out.json"
-file = 'repot2.json'
+dirname = "hyakki"
+dir = "data/"+dirname+"/"
+
+path = dir+"input.json"
+opath = dir+"result.json"
+file = dir+'repot.json'
 
 original = ""; #"写真帖『東京帝國大學』明治33年(1900)年版（東京大学総合図書館所蔵）"
 after = ""; #"写真帖『東京帝國大學』明治33年(1900)年版（東京大学総合図書館所蔵）を改変"
