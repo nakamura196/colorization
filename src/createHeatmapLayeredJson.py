@@ -1,7 +1,7 @@
 import os
 import json
 
-dirname = "hiraga"
+dirname = "hyakki"
 dir = "../docs/data/" + dirname + "/"
 
 path = dir + "input.json"
