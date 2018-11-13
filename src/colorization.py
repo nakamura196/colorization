@@ -1,8 +1,8 @@
 import os
 
-path = '/Users/satoru/Downloads/abc/331900'
-opath = '/Users/satoru/Downloads/obc'
-file = '/Users/satoru/Downloads/abc/331900.sh'
+path = '/Users/satoru/Downloads/hiraga/112929'
+opath = '/Users/satoru/Downloads/hiraga/out'
+file = '/Users/satoru/Downloads/hiraga/112929.sh'
 f = open(file, 'w')
 for x in os.listdir(path):
     if x.find("DS_Store") == -1:

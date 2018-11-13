@@ -1,8 +1,8 @@
 import os
 import json
 
-dirname = "hyakki"
-dir = "data/"+dirname+"/"
+dirname = "hiraga"
+dir = "../docs/data/"+dirname+"/"
 
 path = dir+"input.json"
 opath = dir+"result.json"
@@ -32,4 +32,4 @@ for i in range(0, len(canvases)):
     resource_2["label"] = after
 
 with open(opath, 'w') as outfile:
-    json.dump(data, outfile)
+    json.dump(data, outfile, ensure_ascii=False, indent=4, sort_keys=True, separators=(',', ': '))
