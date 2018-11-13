@@ -2,14 +2,14 @@ import os
 import json
 
 dirname = "hiraga"
-dir = "../docs/data/"+dirname+"/"
+dir = "../docs/data/" + dirname + "/"
 
-path = dir+"input.json"
-opath = dir+"result.json"
-file = dir+'repot.json'
+path = dir + "input.json"
+opath = dir + "result.json"
+file = dir + 'repot.json'
 
-original = ""; #"写真帖『東京帝國大學』明治33年(1900)年版（東京大学総合図書館所蔵）"
-after = ""; #"写真帖『東京帝國大學』明治33年(1900)年版（東京大学総合図書館所蔵）を改変"
+original = "";  # "写真帖『東京帝國大學』明治33年(1900)年版（東京大学総合図書館所蔵）"
+after = "";  # "写真帖『東京帝國大學』明治33年(1900)年版（東京大学総合図書館所蔵）を改変"
 
 with open(path, 'r') as f:
     data = json.load(f)
@@ -26,10 +26,12 @@ for i in range(0, len(canvases)):
     resource_old["label"] = original
     resource["@type"] = "oa:Choice"
 
-    resource["default"] = resource_old
+    resource["default"] = resource_2  # resource_old
     resource["item"] = []
-    resource["item"].append(resource_2)
+    resource["item"].append(resource_old)  # (resource_2)
     resource_2["label"] = after
+
+    canvas["thumbnail"] = canvases2[i]["thumbnail"]
 
 with open(opath, 'w') as outfile:
     json.dump(data, outfile, ensure_ascii=False, indent=4, sort_keys=True, separators=(',', ': '))
